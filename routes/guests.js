@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const [guests] = await db.execute('SELECT * FROM convidados');
     res.json(guests);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(400).send(err.message);
   }
 });
 
